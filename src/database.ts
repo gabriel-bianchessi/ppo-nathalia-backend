@@ -1,5 +1,5 @@
-import betterSqlite3 from 'better-sqlite3'
+import sqlite3 from "sqlite3"
 
-const db = betterSqlite3('db.sqlite')
+const db = new sqlite3.Database("db.sqlite")	
 
 export default db

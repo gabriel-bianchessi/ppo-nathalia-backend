@@ -3,12 +3,11 @@ import db from './database'
 const sql = `
   CREATE TABLE IF NOT EXISTS user (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    firstName TEXT NOT NULL,
-    lastName TEXT NOT NULL,
+    name TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
     createdAt TEXT NOT NULL,
-    updatedAt TEXT NOT NULL,
+    updatedAt TEXT,
     birthDate DATE NOT NULL,
     description TEXT,
     type TEXT NOT NULL
@@ -19,7 +18,7 @@ const sql = `
     title TEXT NOT NULL,
     content TEXT NOT NULL,
     createdAt TEXT NOT NULL,
-    updatedAt TEXT NOT NULL,
+    updatedAt TEXT,
     userId INTEGER NOT NULL,
     FOREIGN KEY (userId) REFERENCES user (id)
   );
