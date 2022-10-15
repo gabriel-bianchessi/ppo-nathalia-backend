@@ -8,10 +8,10 @@ const sql = `
     email TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
     createdAt TEXT NOT NULL,
-    updatedAt TEXT NOT NULL
+    updatedAt TEXT NOT NULL,
     birthDate DATE NOT NULL,
     description TEXT,
-    type TEXT NOT NULL,
+    type TEXT NOT NULL
   );
 
   CREATE TABLE IF NOT EXISTS post (
@@ -22,7 +22,7 @@ const sql = `
     updatedAt TEXT NOT NULL,
     userId INTEGER NOT NULL,
     FOREIGN KEY (userId) REFERENCES user (id)
-  ); 
+  );
 
   CREATE TABLE IF NOT EXISTS address (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
