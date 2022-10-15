@@ -3,7 +3,7 @@ import { RunResult } from "sqlite3"
 import db from "../database"
 import bcrypt from "bcrypt"
 import { randomBytes } from "crypto"
-const session: any = []
+export const session: any = []
 
 const router = Router()
 
